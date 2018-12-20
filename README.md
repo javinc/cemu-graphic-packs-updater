@@ -6,7 +6,7 @@ Downloads latest graphic packs and extracts to your [Cemu](http://cemu.info/) fo
 Graphic Packs source https://github.com/slashiee/cemu_graphic_packs
 
 
-## How to use updater?
+## How to use?
 
 #### Simple
 - download `updater.exe`
