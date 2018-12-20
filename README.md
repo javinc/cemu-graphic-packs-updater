@@ -9,7 +9,7 @@ Graphic Packs source https://github.com/slashiee/cemu_graphic_packs
 ## How to use?
 
 #### Simple
-- download `updater.exe`
+- download latest `updater.exe`
 - place in `updater.exe` inside your cemu folder
 - start `updater.exe`
 
