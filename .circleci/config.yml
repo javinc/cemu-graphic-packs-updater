@@ -11,7 +11,7 @@ jobs:
       - image: circleci/golang:1.11
     steps:
       - checkout
-      - go get github.com/aktau/github-release
+      - run: go get github.com/aktau/github-release
       - run: github-release --help
 workflows:
   version: 2
