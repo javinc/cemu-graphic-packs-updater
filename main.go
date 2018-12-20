@@ -15,10 +15,18 @@ import (
 	"time"
 )
 
-// NOTE: Personal config
-const extractDir = "cemu/graphicPacks"
+const (
+	extractDir = "graphicPacks"
+	rootURL    = "https://github.com/slashiee/cemu_graphic_packs/releases"
+)
 
-const rootURL = "https://github.com/slashiee/cemu_graphic_packs/releases"
+var (
+	gfxPackOnly = []string{
+		"BreathOfTheWild",
+		"MarioKart8",
+		"SuperMario3DWorld",
+	}
+)
 
 func main() {
 	intro()
@@ -63,11 +71,6 @@ func main() {
 	exit()
 }
 
-func fail(v ...interface{}) {
-	fmt.Println(v...)
-	exit()
-}
-
 var re = regexp.MustCompile(`/download/.*/graphicPacks.*.zip`)
 
 func findFilePath(text string) (string, error) {
@@ -102,12 +105,6 @@ func download(path string) (filename string, err error) {
 
 	fmt.Println("downloaded", filename, n/1000, "KB")
 	return filename, nil
-}
-
-var gfxPackOnly = []string{
-	"BreathOfTheWild",
-	"MarioKart8",
-	"SuperMario3DWorld",
 }
 
 func shouldUnzip(fpath string) bool {
@@ -195,6 +192,11 @@ func intro() {
 	fmt.Println("---------------------------------------")
 	duration := time.Second
 	time.Sleep(duration)
+}
+
+func fail(v ...interface{}) {
+	fmt.Println(v...)
+	exit()
 }
 
 func exit() {
