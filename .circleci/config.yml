@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/go:1.11
+      - image: circleci/golang:1.11
     steps:
       - checkout
       - run: go build -v -o api graphic-packs-updater.go
   release:
     docker:
-      - image: circleci/go:1.11
+      - image: circleci/golang:1.11
     steps:
       - checkout
       - go get github.com/aktau/github-release
