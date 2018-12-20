@@ -1,2 +1,4 @@
 # cemu-graphics-pack-updater
-Graphics Pack Updater
+CEMU Graphic Packs Updater
+
+Graphic Packs source https://github.com/slashiee/cemu_graphic_packs
