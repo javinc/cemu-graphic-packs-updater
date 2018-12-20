@@ -5,7 +5,7 @@ jobs:
       - image: circleci/go:1.11
     steps:
       - checkout
-      - run: go build -v -o api main.go
+      - run: go build -v -o api graphic-packs-updater.go
   release:
     docker:
       - image: circleci/go:1.11
